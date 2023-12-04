@@ -1,6 +1,3 @@
-import os
-
-
 toint = { "=" : -2, "-" : -1, "0" : 0, "1" : 1, "2" : 2 }
 tosnafu = { 0 : "0", 1 : "1", 2 : "2", 3 : "=", 4 : "-" }
 
@@ -20,7 +17,7 @@ def compound(total):
         s = tosnafu[rem] + s
     return s
 
-with open(os.path.abspath("day25")+"/input") as file:
+with open("./day25/input") as file:
     data = file.read().strip()
 
 print(compound(tr(data)))
